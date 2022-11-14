@@ -13,3 +13,4 @@ Faktoriyal(sayi)
 
 
 # Mutlak değerini alacak şekilde yaptım mesela -9 un karekökü 3 oluyo recursive kullanmak için böyle yaptım
+# Yeni fark ettim ben karekök almayı yapmışım xd
