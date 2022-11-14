@@ -17,9 +17,9 @@ class Ogrenci:
         with open("kayit.txt","r",encoding="utf-8") as file:
             lines = file.readlines()
             file.seek(0)
-            for line in range(len(lines)-1):
+            for line in range(len(lines)):
                 if lines[line].count(id_soru) == 1 :
-                    print(file.readline())
+                    print(lines[line])
                 
 
     def OgrenciSilme(id_soru):
