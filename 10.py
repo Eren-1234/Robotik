@@ -9,5 +9,5 @@ sıra_kilo = kilo.sort()
 plt.xlabel("Boy")
 plt.ylabel("Kilo")
 plt.title("Boy-Kilo Grafiği")
-plt.scatter(boy, kilo)
+plt.scatter(boy, kilo)    # nokta grafiği için scatter kullandım
 plt.show()
