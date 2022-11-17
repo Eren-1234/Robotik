@@ -1,16 +1,10 @@
-def Faktoriyal(sayi):
-
-    if sayi<0:
-        sayi = sayi*(-1)
-        Faktoriyal(sayi)
-        
-    elif sayi>0:
-        result = sayi**0.5
-        print(result)
-    
-sayi = int(input("Karekökü alinacak sayiyi giriniz: "))
-Faktoriyal(sayi)
+def fact(x):
+    if x==1:
+        return 1
+    else:
+        y = x*fact(x-1)
+        return y
+x = int(input("Faktoriyali alinacak sayiyi giriniz: "))
+print(fact(x))
 
 
-# Mutlak değerini alacak şekilde yaptım mesela -9 un karekökü 3 oluyo recursive kullanmak için böyle yaptım
-# Yeni fark ettim ben karekök almayı yapmışım xd
