@@ -72,7 +72,7 @@ def rotate(speed,angle):
 		diff = angle - pose_theta
 		print("Aci farki: ",diff)
 
-		if abs(diff) > 0.01:
+		if abs(diff) > 0.1:
 			vel_msg.angular.z = speed
 			vel_pub.publish(vel_msg)
 
