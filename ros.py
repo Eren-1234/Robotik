@@ -88,6 +88,8 @@ if __name__ == "__main__":
 	rospy.Subscriber("/turtle1/pose", Pose,callbackPose)
 	rospy.Subscriber("/cmd/goal_pose", Pose,callbackgoalpose)
 	vel_pub = rospy.Publisher("/turtle1/cmd_vel",Twist,queue_size = 5)
+	pose = Pose()
+	goal_pose = Pose()
 	loop_rate = rospy.Rate(5)
 
 	while not rospy.is_shutdown():
@@ -96,8 +98,8 @@ if __name__ == "__main__":
 		fark_y = goal_pose.y - pose.y
 
 		angle = math.atan2(fark_y,fark_x)
-		rotate(0.05,angle)
-		move(0.2,goal_pose)
-		rotate(0.05,goal_pose.theta)
+		rotate(goal_pose.angular_velocity,angle)
+		move(goal_pose.linear_velocity,goal_pose)
+		rotate(goal_pose.angular_velocity,goal_pose.theta)
 		
 		loop_rate.sleep()
