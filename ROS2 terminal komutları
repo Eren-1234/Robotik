@@ -1,0 +1,30 @@
+$ touch my_first_node.py		// ilgili yerin içinde dosya oluşturma komutu
+$ chmod +x my_first_node.py		// scriptin çalıştırılabilir olmasını sağlar (doğrudan terminalden ./my_first_node.py olarak çalıştırmamı sağlar kodumu )
+$ rqt_graph				// ros da graph ekranı açar nodeların bağlantılarını görebilirsin
+$ code.  				// vs code u açar
+$ colcon build				// ros workspace inde bir değişiklik yaptığın zaman bu komutu çalıştır
+$ colcon build --symlink-install	// colcon buildin aynısı sadece kaynak kodları yeniden inşa etmeden günceller 
+$ source ~/.bashrc			// colcon build den sonra çalışma alanına kaynak sağlaman için bu komutuda çalıştırman gerekiyor
+$ ros2 run <paket_adı> <düğüm_adı>	// node u çalıştırır (ros çalışma dosyası konumunda olman lazım)
+$ ros2 node list			// node ların listesini görebiliriz
+$ ros2 topic list			// topic listesini görebiliriz
+$ ros2 node info /my_first_node		// my_first_node node unun bilgilerini görebiliriz
+$ ros2 topic info /örnektopic		// örnektopic in bilgilerini görebiliriz
+$ ros2 topic echo /örnektopic		// örnektopic e aktarılan data yı görebilirsin
+$ ros2 interface show (topic veya service type bilgisi) // datanın detayını görebilirsin
+
+Not Bilgi: ros workspaceimdeki setup.py dosyasındaki entry_points kısmında 'console_scripts' içine düğümünün bilgilerini girmen gerekiyor (ros2 run ile çalışabilmesi için)
+Not Bilgi: Kullandığımız paketleri ise package.xml dosyasında <depend>...</depend> olarak altına yeni oluşturup yazıp kaydetmeliyiz.
+Not Bilgi: request ve response şeklinde bir bilgi alışverişi yapacaksan servisleri kullanman gerekir ros ta
+
+$ ros2 service list			// service leri listeler
+$ ros2 service type (service türü)	// service bilgisini görürsün
+$ ros2 service call (ismi mesela /spawn) (type) "{buraya değerleri girilir}" 	// servis bu şekilde kullanılabilir 
+
+
+
+ödev için:
+$ ros2 service call /kill turtlesim/srv/Kill "{name: 'turtle1'}"
+$ ros2 service call /spawn turtlesim/srv/Spawn "{x: 0.0, y: 0.0, theta: 0.0, name: 'turtle1'}"
+$ ros2 service call /spawn turtlesim/srv/Spawn "{x: 4.0, y: 5.0, theta: 0.0, name: 'turtle2'}"
+
