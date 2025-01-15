@@ -20,11 +20,3 @@ Not Bilgi: request ve response şeklinde bir bilgi alışverişi yapacaksan serv
 $ ros2 service list			// service leri listeler
 $ ros2 service type (service türü)	// service bilgisini görürsün
 $ ros2 service call (ismi mesela /spawn) (type) "{buraya değerleri girilir}" 	// servis bu şekilde kullanılabilir 
-
-
-
-ödev için:
-$ ros2 service call /kill turtlesim/srv/Kill "{name: 'turtle1'}"
-$ ros2 service call /spawn turtlesim/srv/Spawn "{x: 0.0, y: 0.0, theta: 0.0, name: 'turtle1'}"
-$ ros2 service call /spawn turtlesim/srv/Spawn "{x: 4.0, y: 5.0, theta: 0.0, name: 'turtle2'}"
-
