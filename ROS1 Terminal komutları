@@ -1,0 +1,20 @@
+$ touch my_first_node.py		// ilgili yerin (script dosya yoluna git) içinde dosya oluşturma komutu
+$ chmod +x my_first_node.py		// scriptin çalıştırılabilir olmasını sağlar (doğrudan terminalden ./my_first_node.py olarak çalıştırmamı sağlar kodumu )
+$ gedit ~/.bashrc	// Bashrc yi açar
+$ sudo apt install ros-noetic-paket ismi	// ros ta paket indirmek için
+$ rqt_graph					// ros da graph ekranı açar nodeların bağlantılarını görebilirsin
+$ rosrun <paket_adı> <düğüm_adı>	// node u çalıştırır (ros çalışma dosyası konumunda olman lazım)
+$ rosnode list				// node ların listesini görebiliriz
+$ rostopic list			// topic listesini görebiliriz
+$ rostopic info /örnektopic		// örnektopic in bilgilerini görebiliriz
+$ rosmsg show mesaj typeı		// infodan gördüğün typeın türünü görebilirsin
+$ rostopic echo /örnektopic		// örnektopic e aktarılan data yı görebilirsin
+$ rosservice list			// service leri listeler
+$ rosservice info (Node)	 	// service bilgisini görürsün
+$ rosservice call (ismi mesela /spawn) "{buraya değerleri girilir}" 	// servis bu şekilde kullanılabilir. 
+$ rossrv show (Type)			// servis içindeki bilgi giriş ve çıkış türlerini görebilirsin
+
+
+$ export TURTLEBOT3_MODEL=burger	// gazeboya kullanacağın modeli belirtiyosun
+$ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch	// gazeboda turtlebot3 burger çalıştırır.
+$ Ödev için “/opt/ros/noetic/share/turtlebot3_description/urdf/ turtlebot3_burger.gazebo.xacro” kısmındaki dosyayı değiştirdim eskisi yani orjinali masaüstümde
